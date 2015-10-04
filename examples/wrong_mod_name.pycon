@@ -1,0 +1,5 @@
+>>> import basic
+>>> basic.__file__
+'/home/kurazu/workspace/pyext2/build/lib.linux-x86_64-3.4/basic.cpython-34m.so'
+>>> basic.__name__
+'different'

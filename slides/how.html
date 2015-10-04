@@ -1,0 +1,33 @@
+<section>
+    <h1>How does it work?</h1>
+</section>
+
+<section>
+    <h2>Module is a shared library</h2>
+    <p><code><span style="color:blue">modulename</span>.cpython-34m.so</code></p>
+</section>
+
+<section>
+    <h2>Exposes only module initialization function</h2>
+    <p><code>PyInit_<span style="color:blue">modulename</span></code></p>
+    <p>Everything else static</p>
+    <include src="examples/so_symbols.sh.html"></include>
+</section>
+
+
+
+<section>
+    <h2>Function name must match</h2>
+    <include src="examples/wrong_init_name.pycon.html"></include>
+</section>
+
+<section>
+    <h2>Module definition doesn't have to match</h2>
+    <include src="examples/wrong_mod_name.c.html"></include>
+    <include src="examples/setup.py.html"></include>
+    <include src="examples/wrong_mod_name.pycon.html"></include>
+</section>
+
+<section>
+    <h1>It exposes</h1>
+</section>

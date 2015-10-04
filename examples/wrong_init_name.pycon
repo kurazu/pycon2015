@@ -1,0 +1,4 @@
+>>> import basic
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ImportError: dynamic module does not define init function (PyInit_basic)

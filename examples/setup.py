@@ -1,6 +1,6 @@
 from setuptools import setup, Extension
 
-basic = Extension('basic', sources=['src/basic_mod/basic.c'])
+basic = Extension('basic', sources=['basic.c'])
 
 setup(
     name='pyext',
