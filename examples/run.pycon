@@ -1,0 +1,10 @@
+>>> import basic
+>>> basic
+<module 'basic' from '/home/kurazu/workspace/pyext/venv/lib/python3.4/site-packages/pyext-0.1-py3.4-linux-x86_64.egg/basic.cpython-34m.so'>
+>>> dir(basic)
+['__doc__', '__file__', '__loader__', '__name__', '__package__', '__spec__', 'hello']
+>>> basic.__file__
+'/home/kurazu/workspace/pyext/venv/lib/python3.4/site-packages/pyext-0.1-py3.4-linux-x86_64.egg/basic.cpython-34m.so'
+>>> basic.hello()
+'Hello world'
+>>>
