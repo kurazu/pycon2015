@@ -1,0 +1,8 @@
+>>> import ctypes
+>>> lib = ctypes.CDLL('simple.so')
+>>> lib
+<CDLL 'simple.so', handle 24473a0 at 7fc3a4ce94e0>
+>>> lib.add
+<_FuncPtr object at 0x7fc3a4c511d8>
+>>> lib.add(4, 7)
+11
