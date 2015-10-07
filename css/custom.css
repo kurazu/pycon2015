@@ -6,3 +6,7 @@
 .reveal .slides section.first small {
     padding: 5px;
 }
+
+.reveal section img {
+    border: none;
+}

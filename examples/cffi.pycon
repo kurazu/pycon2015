@@ -1,0 +1,10 @@
+>>> from cffi import FFI
+>>> ffi = FFI()
+>>> ffi.cdef("int add(int a, int b);")
+>>> lib = ffi.dlopen('simple.so')
+>>> lib
+<cffi.api._make_ffi_library.<locals>.FFILibrary object at 0x7f14cdb32e48>
+>>> lib.add
+<cdata 'int(*)(int, int)' 0x7f14cd61a820>
+>>> lib.add(4, 7)
+11
