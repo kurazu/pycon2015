@@ -1,0 +1,7 @@
+>>> mapping = {'fruit': ['Cherry', 'Apple'], 'vegetable': ['Tomato', 'Cucumber']}
+>>> module.belongs(mapping, 'Cherry', 'fruit')
+True
+>>> module.belongs(mapping, 'Strawberry', 'fruit')
+False
+>>> module.belongs(category='fruit', item='Cherry', mapping=self.mapping)
+True

@@ -1,0 +1,2 @@
+>>> module.hello("Grzegorz", -3)
+'Hello Grzegorz age 4294967293!'

@@ -1,4 +1,4 @@
 >>> import basic
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
-SystemError: initialization of basic did not return an extension modul
+SystemError: initialization of basic did not return an extension module
