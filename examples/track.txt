@@ -1,0 +1,15 @@
+ --- modulename: refcount, funcname: main
+refcount.py(12):     a = Trackable('1')
+CREATE 1
+refcount.py(13):     b = Trackable('2')
+CREATE 2
+refcount.py(14):     a = b  # '1' object is no longer needed
+DELETE 1
+refcount.py(15):     b = Trackable('3')  # '2' is referred by 'a' variable
+CREATE 3
+refcount.py(16):     del b # '3' object is no longer needed
+DELETE 3
+refcount.py(17):     a # '2' object will be freed when the function ends
+DELETE 2
+refcount.py(22):     print('END')
+END
