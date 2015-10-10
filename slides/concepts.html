@@ -81,7 +81,84 @@
 
 <section>
     <h2>Reference counting in C</h2>
+    <h3>New reference</h3>
+    <p><code>PyObject* PyObject_GetAttr(PyObject *o, PyObject *attr_name)</code></p>
+    <p><code>getattr(o, attr_name)</code></p>
+    <h3>Borrowed reference</h3>
+    <p><code>int PyArg_ParseTuple(PyObject *args, const char *format, ...)</code></p>
+</section>
+
+<section>
+    <h2>Reference counting in C</h2>
     <include src="examples/refs.c.html"></include>
+</section>
+
+<section>
+    <h1>Threads and GIL</h1>
+</section>
+
+<section>
+    <h2>Threads and GIL</h2>
+    <blockquote>The Python interpreter is not fully thread-safe. In order to support multi-threaded Python programs, there’s a global lock, called the global interpreter lock or GIL, that must be held by the current thread before it can safely access Python objects.</blockquote>
+</section>
+
+<section>
+    <h2>Threads and GIL</h2>
+    <blockquote>Therefore, the rule exists that only the thread that has acquired the GIL may operate on Python objects or call Python/C API functions.</blockquote>
+</section>
+
+<section>
+    <h2>Threads and GIL</h2>
+    <blockquote>The lock is also released around potentially blocking I/O operations like reading or writing a file, so that other Python threads can run in the meantime.</blockquote>
+</section>
+
+<section>
+    <h2>Threads and GIL</h2>
+    <include src="examples/no_gil.c.html"></include>
+</section>
+
+<section>
+    <h2>Threads and GIL</h2>
+    <include src="examples/gil.c.html"></include>
+</section>
+
+<section>
+    <h2>Threads and GIL</h2>
+    <h4>Task: Calculate fibonacci(43) &times; 100 times.</h4>
+    <ul>
+        <li>100 &times; single thread.</li>
+        <li>50 &times; each of 2 threads.</li>
+        <li>25 &times; each of 4 threads.</li>
+    </ul>
+</section>
+
+<section>
+    <h2>Threads and GIL</h2>
+    <table>
+        <thead>
+            <tr>
+                <th></th>
+                <th>Single thread</th>
+                <th>2 threads</th>
+                <th>4 threads</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>calc</td>
+                <td>242.183</td>
+                <td>251.481</td>
+                <td>248.529</td>
+            </tr>
+            <tr>
+                <td>calc_release</td>
+                <td>242.092</td>
+                <td>130.035</td>
+                <td>98.867</td>
+            </tr>
+        </tbody>
+    </table>
+    <p><small>2 physical CORE / 4 logical CORE CPU</small></p>
 </section>
 
 <section>
