@@ -98,6 +98,11 @@
 </section>
 
 <section>
+    <h2>Is Python multi-threaded?</h2>
+    <img src="img/threads.jpg">
+</section>
+
+<section>
     <h2>Threads and GIL</h2>
     <blockquote>The Python interpreter is not fully thread-safe. In order to support multi-threaded Python programs, there’s a global lock, called the global interpreter lock or GIL, that must be held by the current thread before it can safely access Python objects.</blockquote>
 </section>
@@ -158,7 +163,17 @@
             </tr>
         </tbody>
     </table>
-    <p><small>2 physical CORE / 4 logical CORE CPU</small></p>
+    <div><small>2 physical CORE / 4 logical CORE CPU</small></div>
+    <img class="fragment" src="img/notbad.jpg" style="height: 300px">
+</section>
+
+<section>
+    <h1>Defining types</h1>
+</section>
+
+<section>
+    <h2>Defining types</h2>
+    <include src="examples/obj_struct.c.html"></include>
 </section>
 
 <section>
