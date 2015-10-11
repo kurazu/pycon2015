@@ -1,5 +1,5 @@
 all:
-	for file in examples/*.c examples/*.py examples/*.pyx examples/*.sh examples/*.txt examples/*.pytb examples/*.pycon examples/*.patch; \
+	for file in examples/*.c examples/*.cpp examples/*.py examples/*.pyx examples/*.sh examples/*.txt examples/*.pytb examples/*.pycon examples/*.patch; \
 	do \
 		if test '(' "$${file}" '!=' 'examples/*.sh' ')' -a '(' "$${file}" '!=' 'examples/*.txt' ')' -a '(' "$${file}" '!=' 'examples/*.pytb' ')' -a '(' "$${file}" '!=' 'examples/*.py' ')' -a '(' "$${file}" '!=' 'examples/*.pycon' ')' -a '(' "$${file}" '!=' 'examples/*.patch' ')'; \
 		then \
@@ -8,6 +8,9 @@ all:
 			case "$${file}" in \
 				*.c) \
 					lexer="c"; \
+					;; \
+				*.cpp) \
+					lexer="cpp"; \
 					;; \
 				*.pyx) \
 					lexer="cython"; \
