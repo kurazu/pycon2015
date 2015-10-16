@@ -61,10 +61,12 @@
 
 		<script src="lib/js/head.min.js"></script>
 		<script src="js/reveal.js"></script>
+        <script src="js/timer.js"></script>
         <script src="js/includer.js"></script>
 
 		<script>
         function onLoad() {
+            new timer.Timer(document.querySelector('.reveal'));
             includer.run(onIncluderDone);
         }
 

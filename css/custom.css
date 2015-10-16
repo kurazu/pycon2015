@@ -10,3 +10,9 @@
 .reveal section img {
     border: none;
 }
+
+.reveal .timer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
