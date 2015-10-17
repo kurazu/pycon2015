@@ -8,7 +8,6 @@
     Timer.prototype.createElement = function(parentElement) {
         var element = document.createElement('small');
         element.className = 'timer';
-        element.innerText = '11:00';
         parentElement.appendChild(element);
         return element;
     };
@@ -22,7 +21,7 @@
         var time;
 
         time = (new Date()).toString().split(' ')[4];
-        return time;
+        return time.slice(0, 5);
     }
 
     Timer.prototype.schedule = function() {
